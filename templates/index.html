@@ -6,7 +6,7 @@
 ##  3. templates/index.html（出版社側のUI）
   <form method="post" enctype="multipart/form-data">
     <label>Title:</label><br>
-    <input type="Title" name="title" required><br><br>
+    <input type="text" name="title" required><br><br>
        title2=title
     <label>Signed PDF:</label><br>
     <input type="file" name="pdf" required><br><br>
@@ -26,6 +26,7 @@
 
   {% if result %}
     <p><strong>For title=<h2>{{ title_path }}{{title2}} :</h2></strong></p>
+<p><strong>Title=:</strong> {{ title }}</p>
   {% endif %}
 
   {% if hash_value %}
