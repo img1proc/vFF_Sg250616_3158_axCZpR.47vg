@@ -6,7 +6,9 @@
 ##  3. templates/index.html（出版社側のUI）
   <form method="post" enctype="multipart/form-data">
     <label>Title:</label><br>
-    <input type="text" name="title" required><br><br>
+    <input type="text" name="title" required>
+<button onclick="getText()">取得</button>  #####
+<p id="displayText"></p><br><br>                #####
        title2=title
     <label>Signed PDF:</label><br>
     <input type="file" name="pdf" required><br><br>
@@ -19,7 +21,15 @@
 
     <button type="submit">Verify</button>
   </form>
-
+#####
+<script>
+function getText() {
+  const titleInput = document.getElementById("titleInput");
+  const title = titleInput.value;
+  document.getElementById("displayText").textContent = title;
+}
+</script>
+#####
   {% if result %}
     <h2>{{ result }}</h2>
   {% endif %}
