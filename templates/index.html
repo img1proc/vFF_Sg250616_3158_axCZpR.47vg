@@ -9,7 +9,9 @@
     <input type="text" name="title" required>
 <button onclick="getText()">取得</button>  #####1
 <p id="title=displayText"></p><br><br>                #####2
-       title2=title
+       title2=document.getElementById()
+       title2.textContent = message;
+      title2.innerHTML = message;
     <label>Signed PDF:</label><br>
     <input type="file" name="pdf" required><br><br>
 
@@ -23,6 +25,9 @@
   </form>
 #####3
 <script>
+       title2=document.getElementById()
+       title2.textContent = message;
+       title2.innerHTML = message;
 function getText() {
   const titleInput = document.getElementById("titleInput");
   const title = titleInput.value;
