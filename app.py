@@ -42,4 +42,4 @@ def home():
         except Exception as e:
             error = str(e)
 
-    return render_template("index.html", result=result, hash_value=hash_value, error=error, {{title}})
+    return render_template("index.html", result=result, hash_value=hash_value, error=error)
