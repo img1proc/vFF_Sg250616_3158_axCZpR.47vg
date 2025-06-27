@@ -3,15 +3,22 @@
 <head><title>Verify Author Signature</title></head>
 <body>
   <h1>Verify Author Signature</h1>
-##  3. templates/index.html（出版社側のUI）
+##  3. templates/index.html（出版社側のUI,）
   <form method="post" enctype="multipart/form-data">
     <label>Title:</label><br>
     <input type="text" name="title" required>
-<button onclick="getText()">取得</button>  #####1
-<p id="title=displayText"></p><br><br>                #####2
+<button onclick="getText()">取得</button>  #####1 index.html
+<p id="displayText"></p><br><br>                #####2 index.html
        title2=document.getElementById()
        title2.textContent = message;
       title2.innerHTML = message;
+<script>
+  ##let text = "これは表示するテキストです。";
+  // document.write() を使用する方法
+  document.write("<p>document.write(): " + title + "</p>");
+  // innerHTML を使用する方法
+  document.getElementById("output").innerHTML = "innerHTML: " + title;
+</script>
     <label>Signed PDF:</label><br>
     <input type="file" name="pdf" required><br><br>
 
@@ -23,7 +30,7 @@
 
     <button type="submit">Verify</button>
   </form>
-#####3
+#####3  index.html
 <script>
        title2=document.getElementById()
        title2.textContent = message;
@@ -34,7 +41,7 @@ function getText() {
   document.getElementById("displayText").textContent = title;
 }
 </script>
-#####4
+#####4   index.html
   <p><strong>Title:</strong> {{ title }}</p>
   {% if result %}
     <h2>{{ result }}</h2>
