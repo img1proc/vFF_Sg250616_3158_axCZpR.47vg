@@ -7,8 +7,8 @@
   <form method="post" enctype="multipart/form-data">
     <label>Title:</label><br>
     <input type="text" name="title" required>
-<button onclick="getText()">取得</button>  #####
-<p id="displayText"></p><br><br>                #####
+<button onclick="getText()">取得</button>  #####1
+<p id="title=displayText"></p><br><br>                #####2
        title2=title
     <label>Signed PDF:</label><br>
     <input type="file" name="pdf" required><br><br>
@@ -21,7 +21,7 @@
 
     <button type="submit">Verify</button>
   </form>
-#####
+#####3
 <script>
 function getText() {
   const titleInput = document.getElementById("titleInput");
@@ -29,7 +29,7 @@ function getText() {
   document.getElementById("displayText").textContent = title;
 }
 </script>
-#####
+#####4
   {% if result %}
     <h2>{{ result }}</h2>
   {% endif %}
