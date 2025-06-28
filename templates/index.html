@@ -14,6 +14,11 @@
   <input type="submit" value="送信">
 </form>
 
+##CGIを使用せず、HTMLのinputタグで入力のテキストを読込み表示
+<input type="text" id="inputText">
+<button onclick="displayText()">表示</button>
+<p id="outputText"></p>
+
   <form method="post" enctype="multipart/form-data">
     <label>Signed PDF:</label><br>
     <input type="file" name="pdf" required><br><br>
@@ -37,6 +42,14 @@ function getText() {
   document.getElementById("displayText").textContent = title;
 }
 </script>
+##CGIを使用せず、表示するには、JavaScript を使用
+<script>
+function displayText() {
+  const inputText = document.getElementById("inputText").value;
+  document.getElementById("outputText").textContent = inputText;
+}
+</script>
+
 #####4   index.html
   <p><strong>Title:</strong> {{ title2}}</p>
   {% if result %}
