@@ -24,6 +24,10 @@ Enhancing Patient Care Through Advanced Algorithms and Data Integration
     <button type="submit">Verify</button>
   </form>
 
+  {% if result %}
+    <h2>{{ result }}</h2>
+  {% endif %}
+
   {% if hash_value %}
     <p><strong>Hash (SHA-256):</strong></p>
     <textarea rows="2" cols="80" readonly>{{ hash_value }}</textarea>
