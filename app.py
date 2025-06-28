@@ -15,18 +15,14 @@ def home():
     if request.method == "POST":
         try:
 
-
             pdf_file = request.files["pdf"]
             sig_file = request.files["signature"]
             pubkey_file = request.files["public_key"]
 
-            ###err##title_path = os.path.join(UPLOAD_FOLDER, title_file.filename)
             pdf_path = os.path.join(UPLOAD_FOLDER, pdf_file.filename)
             sig_path = os.path.join(UPLOAD_FOLDER, sig_file.filename)
             pubkey_path = os.path.join(UPLOAD_FOLDER, pubkey_file.filename)
 
-            ###err##title_file.save(title_path)
-            ###err##title2=title_path
             pdf_file.save(pdf_path)
             sig_file.save(sig_path)
             pubkey_file.save(pubkey_path)

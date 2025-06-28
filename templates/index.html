@@ -4,20 +4,13 @@
 <body>
   <h1>Verify Author Signature</h1>
 ##  3. templates/index.html（出版社側のUI,）
+<--250628_22_00 -->
+<br><br>
+    <label>Title:Artificial Intelligence in Diagnostic Imaging
+Enhancing Patient Care Through Advanced Algorithms and Data Integration
+, Author:Shazia Hassan</label><br>
+</p>              
 
-    <label>Title:</label><br>
-#####1 index.html
-</p><br><br>                #####2 index.html
- 
-#
-<form action="index.html" method="post"> ##250628_18_20 added
-##CGIを使用せず、HTMLのinputタグで入力のテキストを読込み表示
-    <input type="text" name="user_name" placeholder="名前を入力">
-    <button type="submit">送信</button>
- </form>  ######250628_19_40
-<p id="user_name"></p>
-
-##<a href="index.html">次のページへ</a>
   <form method="post" enctype="multipart/form-data">
     <label>Signed PDF:</label><br>
     <input type="file" name="pdf" required><br><br>
@@ -30,31 +23,6 @@
 
     <button type="submit">Verify</button>
   </form>
-###2.5  index.html 250628_18_30
-##delete script--/script
-
-#####3  index.html
-
-##CGIを使用せず、表示するには、JavaScript を使用
-<p id="outputText"></p>
-<script>
-function displayText() {
-  const inputText = document.getElementById("inputText").value;
-  document.getElementById("outputText").textContent = inputText;
-}
-</script>
-
-#####4   index.html
-  <p><strong>Title:</strong> {{ title2}}</p>
-
-  {% if title3 %}
-    <h2>{{ title3 }}{{title4}}</h2>
-  {% endif %}
-
-  {% if result %}
-    <p><strong>For title2=<h2>{{ title_path }}{{title2}} :</h2></strong></p>
-<p><strong>Title=:</strong> {{ title2 }}</p>
-  {% endif %}
 
   {% if hash_value %}
     <p><strong>Hash (SHA-256):</strong></p>
