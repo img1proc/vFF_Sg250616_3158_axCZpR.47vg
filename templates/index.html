@@ -48,7 +48,6 @@ function displayText() {
   <p><strong>Title:</strong> {{ title2}}</p>
 
   {% if result %}}
-      <script>
       const urlParams = new URLSearchParams(window.location.search);
       const userName = urlParams.get('user_name');
 
@@ -57,7 +56,6 @@ function displayText() {
       if(userName){
           document.write("こんにちは、" + userName + "さん！");
       }
-      </script>
 
   {% if title3 %}
     <h2>{{ title3 }}{{title4}}</h2>
