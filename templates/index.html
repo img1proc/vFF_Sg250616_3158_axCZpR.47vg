@@ -47,16 +47,6 @@ function displayText() {
 #####4   index.html
   <p><strong>Title:</strong> {{ title2}}</p>
 
-  {% if result %}}
-      const urlParams = new URLSearchParams(window.location.search);
-      const userName = urlParams.get('user_name');
-
-      //POSTの場合
-      const userName = "<?php echo $_POST['user_name']; ?>";
-      if(userName){
-          document.write("こんにちは、" + userName + "さん！");
-      }
-
   {% if title3 %}
     <h2>{{ title3 }}{{title4}}</h2>
   {% endif %}
