@@ -10,14 +10,14 @@
 </p><br><br>                #####2 index.html
  
 #
-<form action="2.html" method="post"> ##250628_18_20 added
+<form action="index.html" method="post"> ##250628_18_20 added
 ##CGIを使用せず、HTMLのinputタグで入力のテキストを読込み表示
     <input type="text" name="user_name" placeholder="名前を入力">
     <button type="submit">送信</button>
  
-##<p id="outputText"></p>
-    title3="use_name"
-    title4=name
+##<p id="user_name"></p>
+
+<a href="index.html">次のページへ</a>
   <form method="post" enctype="multipart/form-data">
     <label>Signed PDF:</label><br>
     <input type="file" name="pdf" required><br><br>
@@ -29,7 +29,7 @@
     <input type="file" name="public_key" required><br><br>
 
     <button type="submit">Verify</button>
-  </form>
+  </form></form>
 ###2.5  index.html 250628_18_30
 <script>
     const urlParams = new URLSearchParams(window.location.search);
