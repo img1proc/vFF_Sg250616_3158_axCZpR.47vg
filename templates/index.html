@@ -18,7 +18,8 @@
 <input type="text" id="inputText">
 <button onclick="displayText()">表示</button>
 <p id="outputText"></p>
-
+title3="displayText()"
+title4="outputText"
   <form method="post" enctype="multipart/form-data">
     <label>Signed PDF:</label><br>
     <input type="file" name="pdf" required><br><br>
@@ -43,6 +44,7 @@ function getText() {
 }
 </script>
 ##CGIを使用せず、表示するには、JavaScript を使用
+<p id="outputText"></p>
 <script>
 function displayText() {
   const inputText = document.getElementById("inputText").value;
@@ -52,8 +54,8 @@ function displayText() {
 
 #####4   index.html
   <p><strong>Title:</strong> {{ title2}}</p>
-  {% if result %}
-    <h2>{{ result }}</h2>
+  {% if title3 %}
+    <h2>{{ title3 }}{{title4}}</h2>
   {% endif %}
 
   {% if result %}
