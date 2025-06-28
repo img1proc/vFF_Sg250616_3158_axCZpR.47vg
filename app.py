@@ -1,8 +1,7 @@
 from flask import Flask, render_template, request
-import os, tempfile, cgi  ##cgi added 260628
+import os, tempfile
 
 from utils.verify_signature import verify_signature
-form = cgi.FieldStorage()   ##cgi.FieldStorage() added 260628
 
 app = Flask(__name__)
 UPLOAD_FOLDER = tempfile.gettempdir()
@@ -16,18 +15,7 @@ def home():
     if request.method == "POST":
         try:
 
-            if "user_input" in form:
-                user_text = form["user_input"].value
-                print("Content-Type: text/html\n")
-                print("<html><body>")
-                print("<h1>入力されたテキスト:</h1>")
-                print("<p>" + user_text + "</p>")
-                print("</body></html>")
-            else:
-                print("Content-Type: text/html\n")
-                print("<html><body>")
-                print("<p>テキストが入力されていません。</p>")
-                print("</body></html>")
+
             pdf_file = request.files["pdf"]
             sig_file = request.files["signature"]
             pubkey_file = request.files["public_key"]
