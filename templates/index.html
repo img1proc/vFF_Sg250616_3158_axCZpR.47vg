@@ -4,21 +4,17 @@
 <body>
   <h1>Verify Author Signature</h1>
 ##  3. templates/index.html（出版社側のUI,）
-  <form method="post" enctype="multipart/form-data">
+
     <label>Title:</label><br>
-    <input type="text" name="title" required>
-<button onclick="getText()">取得</button>  #####1 index.html
-<p id="displayText"></p><br><br>                #####2 index.html
-       title2=document.getElementById()
-       title2.textContent = message;
-      title2.innerHTML = message;
-<script>
-  ##let text = "これは表示するテキストです。";
-  // document.write() を使用する方法
-  document.write("<p>document.write(): " + title + "</p>");
-  // innerHTML を使用する方法
-  document.getElementById("output").innerHTML = "innerHTML: " + title;
-</script>
+#####1 index.html
+</p><br><br>                #####2 index.html
+ 
+<form action="/cgi-bin/my_cgi_script.cgi" method="post">
+  <input type="text" name="user_input">
+  <input type="submit" value="送信">
+</form>
+
+  <form method="post" enctype="multipart/form-data">
     <label>Signed PDF:</label><br>
     <input type="file" name="pdf" required><br><br>
 
@@ -42,14 +38,14 @@ function getText() {
 }
 </script>
 #####4   index.html
-  <p><strong>Title:</strong> {{ title }}</p>
+  <p><strong>Title:</strong> {{ title2}}</p>
   {% if result %}
     <h2>{{ result }}</h2>
   {% endif %}
 
   {% if result %}
-    <p><strong>For title=<h2>{{ title_path }}{{title2}} :</h2></strong></p>
-<p><strong>Title=:</strong> {{ title }}</p>
+    <p><strong>For title2=<h2>{{ title_path }}{{title2}} :</h2></strong></p>
+<p><strong>Title=:</strong> {{ title2 }}</p>
   {% endif %}
 
   {% if hash_value %}
