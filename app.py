@@ -16,14 +16,14 @@ def home():
     if request.method == "POST":
         try:
 
-              if "user_input" in form:
-                 user_text = form["user_input"].value
-                 print("Content-Type: text/html\n")
-                 print("<html><body>")
-                 print("<h1>入力されたテキスト:</h1>")
-                 print("<p>" + user_text + "</p>")
-                 print("</body></html>")
-             else:
+            if "user_input" in form:
+                user_text = form["user_input"].value
+                print("Content-Type: text/html\n")
+                print("<html><body>")
+                print("<h1>入力されたテキスト:</h1>")
+                print("<p>" + user_text + "</p>")
+                print("</body></html>")
+            else:
                 print("Content-Type: text/html\n")
                 print("<html><body>")
                 print("<p>テキストが入力されていません。</p>")
